@@ -1,0 +1,238 @@
+.destination-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* Image */
+
+.destination-card-image {
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
+}
+
+.destination-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.destination-card:hover .destination-card-image img {
+  transform: scale(1.07);
+}
+
+.destination-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      transparent 50%
+    );
+}
+
+/* Save */
+
+.save-button {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  font-size: 20px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.save-button:hover {
+  transform: scale(1.08);
+
+  background: white;
+
+  color: #ef4444;
+}
+
+.save-button.saved {
+  background: white;
+  color: #ef4444;
+}
+
+/* Popular */
+
+.popular-badge {
+  position: absolute;
+
+  left: 15px;
+  top: 15px;
+
+  padding: 6px 9px;
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  color: var(--primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+/* Rating */
+
+.destination-rating {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  padding: 6px 9px;
+
+  border-radius: 100px;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(8px);
+
+  color: white;
+
+  font-size: 11px;
+}
+
+.destination-rating span {
+  color: #fbbf24;
+}
+
+/* Content */
+
+.destination-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 18px 18px 0;
+}
+
+.destination-category {
+  color: var(--primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.destination-card-content h3 {
+  margin-top: 4px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+}
+
+.destination-card-content p {
+  margin-top: 3px;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+}
+
+.destination-view-button {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.destination-card:hover .destination-view-button {
+  background: var(--primary);
+
+  color: white;
+
+  border-color: var(--primary);
+
+  transform: rotate(45deg);
+}
+
+.destination-description {
+  padding: 12px 18px 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
