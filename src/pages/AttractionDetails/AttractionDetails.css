@@ -1,0 +1,164 @@
+.attraction-details-page {
+  background: #f7f5f0;
+  min-height: 100vh;
+}
+
+.attraction-detail-hero {
+  height: 620px;
+  position: relative;
+  overflow: hidden;
+}
+
+.attraction-detail-hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attraction-detail-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.1)
+    );
+}
+
+.attraction-detail-content {
+  position: absolute;
+  left: 8%;
+  bottom: 80px;
+  color: white;
+  max-width: 700px;
+}
+
+.attraction-detail-content button {
+  margin-bottom: 30px;
+  border: 1px solid
+    rgba(255,255,255,.5);
+  background: rgba(255,255,255,.12);
+  color: white;
+  border-radius: 30px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.attraction-detail-content span {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.attraction-detail-content h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  margin: 15px 0;
+}
+
+.attraction-detail-content p {
+  line-height: 1.7;
+}
+
+.attraction-detail-body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 30px;
+}
+
+.story-section,
+.reel-section {
+  margin-bottom: 100px;
+}
+
+.story-section > span,
+.section-title > span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.story-section h2,
+.section-title h2 {
+  font-size: 45px;
+  margin: 10px 0 40px;
+}
+
+.audio-story {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.audio-story h3 {
+  margin: 0 0 8px;
+}
+
+.audio-story p {
+  color: #666;
+}
+
+.audio-story small {
+  font-weight: 600;
+}
+
+.audio-story audio {
+  max-width: 350px;
+}
+
+.detail-reels {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 25px;
+}
+
+.detail-reel {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.detail-reel video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background: #111;
+}
+
+.detail-reel h3,
+.detail-reel p {
+  padding: 0 20px;
+}
+
+.detail-reel p {
+  color: #666;
+  padding-bottom: 20px;
+}
+
+.attraction-details-state {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .audio-story {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .audio-story audio {
+    width: 100%;
+    max-width: none;
+  }
+
+  .detail-reels {
+    grid-template-columns: 1fr;
+  }
+}

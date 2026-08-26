@@ -1,0 +1,431 @@
+.destination-details-page {
+  background: var(--background);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.destination-details-hero {
+  position: relative;
+
+  height: min(720px, 78vh);
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+.destination-details-hero > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.details-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.12) 65%,
+      rgba(0, 0, 0, 0.28)
+    );
+}
+
+.details-hero-content {
+  position: absolute;
+
+  left: 50%;
+  bottom: 65px;
+
+  width: min(1200px, calc(100% - 40px));
+
+  transform: translateX(-50%);
+}
+
+.back-destinations {
+  display: inline-flex;
+
+  margin-bottom: 35px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 12px;
+
+  transition: color 0.25s ease;
+}
+
+.back-destinations:hover {
+  color: white;
+}
+
+.details-location {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+.destination-details-hero h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(65px, 10vw, 120px);
+
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+}
+
+.details-rating {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 20px;
+
+  font-size: 13px;
+}
+
+.details-rating span {
+  color: #fbbf24;
+}
+
+.details-rating small {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 10px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.destination-details-content {
+  width: min(1100px, calc(100% - 40px));
+
+  display: grid;
+
+  grid-template-columns: 1fr 330px;
+
+  gap: 80px;
+
+  margin: 0 auto;
+
+  padding: 90px 0;
+}
+
+.details-category {
+  color: var(--primary);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+.details-main h2 {
+  margin-top: 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 5vw, 55px);
+
+  line-height: 1;
+}
+
+.details-main p {
+  max-width: 650px;
+
+  margin-top: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.details-main .details-description {
+  color: var(--text-primary);
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   SIDE CARD
+========================= */
+
+.trip-card {
+  position: sticky;
+
+  top: 100px;
+
+  padding: 27px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.trip-card > span {
+  color: var(--primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.trip-card h3 {
+  margin-top: 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+}
+
+.trip-card p {
+  margin-top: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.trip-card button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+  padding: 13px 14px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.trip-card button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+.trip-card button strong {
+  font-size: 17px;
+}
+
+/* =========================
+   QUICK INFO
+========================= */
+
+.destination-quick-info {
+  width: min(1100px, calc(100% - 40px));
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin: 0 auto;
+
+  padding: 25px 0 80px;
+
+  border-top: 1px solid var(--border);
+}
+
+.quick-info-item {
+  padding: 0 25px;
+
+  border-right: 1px solid var(--border);
+}
+
+.quick-info-item:first-child {
+  padding-left: 0;
+}
+
+.quick-info-item:last-child {
+  border-right: none;
+}
+
+.quick-info-item span {
+  display: block;
+
+  color: var(--text-secondary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.quick-info-item strong {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.destination-not-found {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.destination-not-found > span {
+  color: var(--primary);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 80px;
+}
+
+.destination-not-found h1 {
+  margin-top: 5px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+}
+
+.destination-not-found p {
+  margin-top: 10px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+.destination-not-found a {
+  margin-top: 22px;
+
+  padding: 11px 15px;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .destination-details-hero {
+    height: 65vh;
+
+    min-height: 480px;
+  }
+
+  .details-hero-content {
+    bottom: 40px;
+
+    width: calc(100% - 28px);
+  }
+
+  .destination-details-hero h1 {
+    font-size: 65px;
+
+    letter-spacing: -2px;
+  }
+
+  .destination-details-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    width: calc(100% - 28px);
+
+    padding: 60px 0;
+  }
+
+  .trip-card {
+    position: static;
+  }
+
+  .destination-quick-info {
+    width: calc(100% - 28px);
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    padding-bottom: 60px;
+  }
+
+  .quick-info-item {
+    padding: 0;
+
+    border-right: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .destination-details-hero h1 {
+    font-size: 55px;
+  }
+
+  .details-main h2 {
+    font-size: 38px;
+  }
+
+  .details-main .details-description {
+    font-size: 16px;
+  }
+}
