@@ -1,0 +1,191 @@
+.profile-page {
+  min-height: calc(100vh - 140px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px;
+
+  background: #f8fafc;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 42px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+.profile-heading {
+  margin-bottom: 30px;
+}
+
+.profile-label {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: #6366f1;
+}
+
+.profile-heading h1 {
+  margin: 8px 0;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  letter-spacing: -0.8px;
+}
+
+.profile-heading p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.profile-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #111827;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.profile-user h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 17px;
+}
+
+.profile-user p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.profile-details {
+  margin-top: 20px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.profile-detail {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-detail span {
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.profile-detail strong {
+  color: #111827;
+
+  font-size: 12px;
+
+  text-align: right;
+}
+
+.profile-home-btn {
+  display: block;
+
+  margin-top: 25px;
+
+  padding: 14px;
+
+  border-radius: 11px;
+
+  background: #111827;
+
+  color: white;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.profile-loading {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 30px 16px;
+  }
+
+  .profile-card {
+    padding: 28px 20px;
+  }
+
+  .profile-detail {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .profile-detail strong {
+    text-align: left;
+  }
+}
