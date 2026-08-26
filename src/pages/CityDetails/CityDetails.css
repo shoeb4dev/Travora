@@ -1,0 +1,572 @@
+/* =========================================
+   CITY DETAILS PAGE
+========================================= */
+
+.city-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8faf9;
+  color: #17201f;
+}
+
+
+/* =========================================
+   LOADING / ERROR
+========================================= */
+
+.city-status {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.city-status h2 {
+  font-size: 32px;
+}
+
+.city-status p {
+  color: #64706e;
+}
+
+
+/* =========================================
+   LOADER
+========================================= */
+
+.city-loader {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #dce3e1;
+  border-top-color: #0f766e;
+
+  border-radius: 50%;
+
+  animation: citySpin 0.8s linear infinite;
+}
+
+@keyframes citySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.city-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+}
+
+.city-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.city-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88),
+      rgba(0, 0, 0, 0.45) 45%,
+      rgba(0, 0, 0, 0.1)
+    );
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 90px 32px;
+
+  color: white;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.city-back-btn {
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #0f766e;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.city-back-btn:hover {
+  background: #115e59;
+  transform: translateY(-2px);
+}
+
+.hero-back-btn {
+  margin-bottom: 45px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-back-btn:hover {
+  background: white;
+  color: #17201f;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.city-label,
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.city-label {
+  color: #ffffff;
+}
+
+.city-hero-content h1 {
+  margin-bottom: 22px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+.city-hero-content p {
+  max-width: 650px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   ATTRACTIONS SECTION
+========================================= */
+
+.city-attractions-section {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 100px 32px;
+}
+
+.city-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 55px;
+}
+
+.section-label {
+  color: #0f766e;
+}
+
+.city-section-header h2 {
+  margin-bottom: 14px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 600;
+
+  line-height: 1.1;
+}
+
+.city-section-header p {
+  max-width: 500px;
+
+  color: #64706e;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.city-search {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  width: 320px;
+
+  padding: 14px 18px;
+
+  background: white;
+
+  border: 1px solid #e5e9e7;
+  border-radius: 999px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.city-search > span {
+  font-size: 22px;
+
+  color: #64706e;
+}
+
+.city-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #17201f;
+
+  font-size: 14px;
+}
+
+.city-search input::placeholder {
+  color: #9aa5a2;
+}
+
+.city-search button {
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #e5e9e7;
+
+  color: #17201f;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+/* =========================================
+   ATTRACTIONS GRID
+========================================= */
+
+.city-attractions-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================================
+   ATTRACTION CARD
+========================================= */
+
+.city-attraction-card {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e5e9e7;
+  border-radius: 22px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.city-attraction-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   ATTRACTION IMAGE
+========================================= */
+
+.city-attraction-image {
+  position: relative;
+
+  width: 100%;
+  height: 270px;
+
+  overflow: hidden;
+}
+
+.city-attraction-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.city-attraction-card:hover
+.city-attraction-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.attraction-category {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(15, 118, 110, 0.9);
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   ATTRACTION CONTENT
+========================================= */
+
+.city-attraction-content {
+  padding: 26px;
+}
+
+.city-attraction-content h3 {
+  margin-bottom: 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+}
+
+.city-attraction-content p {
+  display: -webkit-box;
+
+  margin-bottom: 24px;
+
+  overflow: hidden;
+
+  color: #64706e;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.city-attraction-content button {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #0f766e;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: gap 0.25s ease;
+}
+
+.city-attraction-card:hover
+.city-attraction-content button {
+  gap: 14px;
+}
+
+.city-attraction-content button span {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.city-empty {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.city-empty h3 {
+  margin-bottom: 10px;
+
+  font-size: 28px;
+}
+
+.city-empty p {
+  color: #64706e;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .city-attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .city-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .city-search {
+    width: 100%;
+    max-width: 450px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .city-hero {
+    min-height: 560px;
+  }
+
+  .city-hero-content {
+    padding: 60px 20px;
+  }
+
+  .city-hero-content h1 {
+    font-size: 58px;
+
+    letter-spacing: -2px;
+  }
+
+  .city-hero-content p {
+    font-size: 15px;
+  }
+
+  .city-attractions-section {
+    padding: 70px 20px;
+  }
+
+  .city-section-header {
+    gap: 25px;
+
+    margin-bottom: 40px;
+  }
+
+  .city-attractions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-attraction-image {
+    height: 250px;
+  }
+
+  .city-back-btn {
+    padding: 10px 18px;
+  }
+
+  .hero-back-btn {
+    margin-bottom: 35px;
+  }
+
+}
