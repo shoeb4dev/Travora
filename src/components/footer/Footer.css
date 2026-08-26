@@ -1,0 +1,113 @@
+.footer {
+  margin-top: 80px;
+
+  background: #102321;
+  color: white;
+}
+
+.footer-container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+  padding: 65px 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footer-brand {
+  max-width: 380px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.footer-logo-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+
+.footer-brand p {
+  margin-top: 18px;
+
+  color: #aebdb9;
+
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 90px;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h4 {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #aebdb9;
+
+  font-size: 13px;
+
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #82918e;
+
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .footer-container {
+    width: min(100% - 28px, 1200px);
+
+    padding: 45px 0;
+
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-links {
+    gap: 55px;
+  }
+}
